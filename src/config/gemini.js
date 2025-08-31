@@ -6,7 +6,7 @@ import { GoogleGenAI } from "@google/genai";
 
 async function main(prompt) {
   const ai = new GoogleGenAI({
-    apiKey: process.env.API_KEY,
+    apiKey: import.meta.env.VITE_API_KEY,
   });
   const config = {
     responseMimeType: "text/plain",
