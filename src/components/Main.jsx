@@ -39,9 +39,8 @@ const Main = ({ isSidebarOpen }) => {
   return (
     <>
       <div
-        className={`flex-1 max-h-[100vh] pb-[120px] relative transition-all duration-300 ${
-          isSidebarOpen ? "ml-56" : "ml-20"
-        }`}
+        className={`flex-1 max-h-[100vh] pb-[120px] relative transition-all duration-300 ${isSidebarOpen ? "ml-56" : "ml-20"
+          }`}
       >
         <div className="flex justify-between items-center text-2xl p-5 text-gray-600 mb-5">
           <p className="font-medium">Gemini</p>
@@ -49,9 +48,8 @@ const Main = ({ isSidebarOpen }) => {
         </div>
 
         <div
-          className={`max-w-[900px] mx-auto px-5 ${
-            isSidebarOpen ? "ml-[100px]" : "ml-[110px]"
-          }`}
+          className={`max-w-[900px] mx-auto px-5 ${isSidebarOpen ? "ml-[100px]" : "ml-[110px]"
+            }`}
         >
           <div className="text-center mb-16">
             {!showresult ? (
@@ -106,8 +104,8 @@ const Main = ({ isSidebarOpen }) => {
           </div>
         </div>
 
-        <div className="w-full px-4 flex justify-center relative left-[5%] sm:static sm:left-0">
-          <div className="bottom-2 w-full max-w-[550px] sm:relative sm:left-[40px] px-4 flex flex-col items-start sm:items-center gap-2 z-10 lg:mt-[50px]">
+        <div className="w-full px-4 flex justify-center">
+          <div className="fixed bottom-4 w-full max-w-[550px] px-4 flex flex-col items-center gap-2 z-50">
             <div className="flex items-center gap-4 bg-slate-100 px-5 py-2 rounded-full w-full shadow-md">
               <input
                 type="text"
@@ -125,12 +123,12 @@ const Main = ({ isSidebarOpen }) => {
                 />
               </div>
             </div>
-
-            <p className="text-xs text-gray-500 text-left sm:text-center w-full pl-1 sm:pl-0">
+              <p className="text-xs text-gray-500 text-left sm:text-center w-full pl-1 sm:pl-0">
               Gemini may display inaccurate info. Always double-check responses.
             </p>
           </div>
         </div>
+
       </div>
     </>
   );

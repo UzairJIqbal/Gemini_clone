@@ -6,12 +6,12 @@ import { GoogleGenAI } from "@google/genai";
 
 async function main(prompt) {
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyCUBt832p7ZNOp1Ybp0lEub_zIh5hn1WW8",
+    apiKey: process.env.API_KEY,
   });
   const config = {
     responseMimeType: "text/plain",
   };
-  const model = "models/gemini-2.5-pro-exp-03-25";
+  const model = "gemini-2.5-pro";
   const contents = [
     {
       role: "user",
